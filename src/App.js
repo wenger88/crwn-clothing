@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomepageComponent from './pages/homepage/homepage.component';
-import Route from "react-router-dom/es/Route";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 const HatsPage = props => (
   <div>
