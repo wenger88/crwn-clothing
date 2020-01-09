@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FormInputComponent from '../form-input/form-input.component';
 import CustomButtonComponent from '../custom-button/custom-button.component';
 
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 import './sign-in.styles.scss';
 
 class SignInComponent extends Component {
@@ -50,7 +51,10 @@ class SignInComponent extends Component {
             handleChange={this.handleChange}
             autoComplete="new-password"
           />
-          <CustomButtonComponent type='submit'> Sign In </CustomButtonComponent>
+          <div className='buttons'>
+            <CustomButtonComponent type='submit'>Sign In</CustomButtonComponent>
+            <CustomButtonComponent onClick={signInWithGoogle} isGoogleSignIn>Sign In with Google</CustomButtonComponent>
+          </div>
         </form>
       </div>
     );
